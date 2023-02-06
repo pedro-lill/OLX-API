@@ -1,0 +1,5 @@
+para criar uma nova api :
+    dotnet new webapi --name FilmesApi
+
+para executar a api:
+    dotnet run --project FilmesApi/FilmesApi.csproj
