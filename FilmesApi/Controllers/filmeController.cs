@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using FilmesApi.models;
-
 namespace FilmesApi.Controllers;
-
 [ApiController]
 [Route("[controller]")]
 public class filmeController : ControllerBase   
@@ -11,23 +9,29 @@ public class filmeController : ControllerBase
     private static int id = 0;
 
     [HttpPost]
-    public void AdicionaFilme([FromBody] Filme filme)
+    public IActionResult addFilme([FromBody] Filme filme)
     {
         filme.Id = id++;
         filmes.Add(filme);
-        Console.WriteLine(filme.Titulo);
-        Console.WriteLine(filme.Duracao);
-    }
+        return CreatedAtAction(nameof(porID),
+            new { id = filme.Id },
+            filme);
+        }
+
     [HttpGet]
-    public  IEnumerable<Filme> RecuperaFilmes()
+    public  IEnumerable<Filme> RecuperaFilmes([FromQuery]int skip =0,[FromQuery] int take = 30)
     {
-        return filmes;
+        return filmes.Skip(skip).Take(take);
     }
 
     [HttpGet("{id}")]
-    public Filme? porID(int id)
+    public IActionResult porID(int id)
     {
-        return filmes.FirstOrDefault(filme => filme.Id == id);
+        var filme = filmes.FirstOrDefault(filme => filme.Id == id);
+        if (filme == null)
+        {
+            return NotFound();
+        }
+        return Ok(filme);
     }
-
 }

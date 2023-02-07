@@ -1,4 +1,10 @@
+using FilmesApi.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<FilmeContext>(options => 
+    options.UseNpgsql(builder.Configuration.GetConnectionString("FilmeConnection")));
 
 // Add services to the container.
 

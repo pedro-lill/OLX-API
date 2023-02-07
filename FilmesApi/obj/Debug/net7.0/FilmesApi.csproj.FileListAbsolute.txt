@@ -31,3 +31,12 @@
 /home/desbravador/Documents/OLX-API/FilmesApi/obj/Debug/net7.0/FilmesApi.pdb
 /home/desbravador/Documents/OLX-API/FilmesApi/obj/Debug/net7.0/FilmesApi.genruntimeconfig.cache
 /home/desbravador/Documents/OLX-API/FilmesApi/obj/Debug/net7.0/ref/FilmesApi.dll
+/home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/Humanizer.dll
+/home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/MySqlConnector.dll
+/home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/Npgsql.dll
+/home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
