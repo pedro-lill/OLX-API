@@ -6,6 +6,21 @@ para executar a api:
 
 history |grep docker
 
+        <comandos importantes>
+take = pegar qtd de registros
+skip = pular qtd de registros
+apllyTo = aplicavel em f(x) ou propriedade    (é como se fosse uma validação)
+SaveChanges = salva as alterações no banco de dados
+Add = adiciona um novo registro no banco de dados
+NoContent = retorna um status 204
+
+
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson --version 7.0.2
+<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.2" />
+
+
+<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+
 
 Recentemente, vimos que utilizar o DbContext é 
 uma das principais maneiras de acessar o banco de dados.
@@ -36,3 +51,43 @@ Quando criamos um recurso novo no sistema através do verbo POST,
  há uma convenção do que deve ser retornado caso a requisição tenha sido efetuada com sucesso.
  created + location com numero 201
 
+
+para fazer migrations no linux:
+    dotnet tool install --global dotnet-ef
+    dotnet ef migrations add FilmeMigration
+    dotnet ef database update
+
+    importante colocar ID user e senha no appsettings.json
+    além de colocar o nome do banco de dados
+
+
+Padrao DTO (Data Transfer Object)
+    é um objeto que contem apenas os dados que queremos retornar para o usuario
+    é um objeto que contem apenas os dados que queremos receber do usuario
+
+
+    Como abrir uma conexão entre a API e o banco de dados através do EntityFramework.
+-- comando : dotnet ef migrations add FilmeMigration
+-- comando : dotnet ef database update
+
+    Como gerar migrations com .NET 6 e mapear nosso objeto no banco de dados.
+
+    O DbContext serve como ponte e para fazer operações no banco.
+
+    Como injetar o DbContext em nosso controlador a fim de acessar o banco de dados.
+
+    Como salvar as alterações no banco de dados através do método SaveChanges() :
+    
+    DTOs nos ajudam a não deixar nosso modelo de banco de dados exposto.
+
+    Como fazer conversões práticas entre diferentes tipos através do AutoMapper.
+
+
+Para altera através do patch:
+    [
+        {
+            "op" : "replace",
+            "path" : "/nome",
+            "value" : "novo nome"
+        }
+    ]

@@ -1,4 +1,13 @@
+using olxapi.Data;
+using Microsoft.EntityFrameworkCore;
+//import addautomapper 
+using AutoMapper;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// builder.Services.AddDbContext<AdContext>(options => 
+//     options.UseNpgsql(builder.Configuration.GetConnectionString("FilmeConnection")));
+
 
 // Add services to the container.
 
@@ -6,6 +15,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// add automapper
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 
 var app = builder.Build();
 

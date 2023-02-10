@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-namespace FilmesApi.models
+namespace FilmesApi.Models
 {
     public class Filme
     {

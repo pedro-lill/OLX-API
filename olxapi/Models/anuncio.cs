@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-namespace olxapi.models
+namespace olxapi.Models
 {
     public class Anuncio
     {
