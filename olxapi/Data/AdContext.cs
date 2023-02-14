@@ -1,11 +1,11 @@
 using olxapi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace AdApi.Data;
+namespace olxapi.Data;
 
-public class AdContext : DbContext
+public class OlxContext : DbContext
 {
-    public AdContext(DbContextOptions<AdContext> options) 
+    public OlxContext(DbContextOptions<OlxContext> options) 
         : base(options)
     {
 

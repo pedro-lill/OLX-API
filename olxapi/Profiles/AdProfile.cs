@@ -10,5 +10,7 @@ public class AdProfile : Profile
    {
         CreateMap<CreateAdDto, Ad>();
         CreateMap<UpdateAdDto, Ad>();
+        CreateMap<Ad, UpdateAdDto>();
+        //CreateMap<Ad, ReadAdDto>();
    } 
 }

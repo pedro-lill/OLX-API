@@ -4,15 +4,15 @@ using olxapi.Data;
 using olxapi.Dtos;
 using AutoMapper;
 
-namespace FilmesApi.Controllers;
+namespace olxapi.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class AdController : ControllerBase   
 {
 
-    private AdContext _context;
+    private OlxContext _context;
     private IMapper _mapper;
-    public AdController(AdContext context, IMapper mapper)
+    public AdController(OlxContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;
@@ -22,16 +22,11 @@ public class AdController : ControllerBase
     public IActionResult addAd(
         [FromBody] CreateAdDto AdDto)
     {
-        Ad ad = _mapper.Map<Ad>(adDto);
-        // Filme filme = new Filme
-        // {
-        //     Titulo = filmeDto.Titulo,
-        //     Diretor = filmeDto.Diretor,
-        //     Duracao = filmeDto.Duracao,
-        //     Genero = filmeDto.Genero
-        // };
+        Console.WriteLine("5454545 ");
+        Ad ad = _mapper.Map<Ad>(AdDto);
         _context.Ads.Add(ad);
         _context.SaveChanges();
+        Console.WriteLine("asada ");
         return CreatedAtAction(nameof(porID),
             new { id = ad.Id },
             ad);

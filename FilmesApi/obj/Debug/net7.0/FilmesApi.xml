@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FilmesApi</name>
+    </assembly>
+    <members>
+        <member name="M:FilmesApi.Controllers.filmeController.addFilme(FilmesApi.Dtos.CreateFilmeDto)">
+            <summary> 
+            Create a new filme to the database
+            </summary>
+            <param name="filmeDto"> object with the fields needed to create the movie </param>
+            <returns> The newly created filme </returns>
+            <returns> IActionResult </returns>
+            <response code="201"> the filme was created </response>
+        </member>
+        <member name="M:FilmesApi.Controllers.filmeController.AtualizaFilme(System.Int32,FilmesApi.Dtos.UpdateFilmeDto)">
+            <summary>
+            Update a filme in the database
+            </summary>
+            <param name="id"> id of the filme to be updated </param>
+            <param name="filmeDto"> object with the fields to be updated </param>
+            <returns> IActionResult </returns>
+            <response code="204"> the filme was updated </response>
+            <response code="404"> the filme was not found </response>
+        </member>
+        <member name="M:FilmesApi.Controllers.filmeController.RecuperaFilmes(System.Int32,System.Int32)">
+            <summary>
+            get a filme in the database
+            </summary>
+        </member>
+        <member name="M:FilmesApi.Controllers.filmeController.RecuperaFilmesPorID(System.Int32)">
+            <summary>
+            Get a filme by id
+            </summary>
+            <param name="id"> id of the filme to be retrieved </param>
+            <returns> IActionResult </returns>
+            <response code="200"> the filme was retrieved </response>
+            <response code="404"> the filme was not found </response>
+        </member>
+        <member name="M:FilmesApi.Controllers.filmeController.AtualizaFilmeParcial(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{FilmesApi.Dtos.UpdateFilmeDto})">
+            <summary>
+            Update a filme in the database
+            </summary>
+            <param name="id"> id of the filme to be updated </param>
+            <param name="patch"> object with the fields to be updated </param>
+            <returns> IActionResult </returns>
+            <response code="204"> the filme was updated </response>
+            <response code="404"> the filme was not found </response>
+            <response code="422"> the patch was not applied </response>
+        </member>
+        <member name="M:FilmesApi.Controllers.filmeController.DeletaFilme(System.Int32)">
+            <summary>
+            Delete a filme in the database
+            </summary>
+            <param name="id"> id of the filme to be deleted </param>
+            <returns> IActionResult </returns>
+            <response code="204"> the filme was deleted </response>
+            <response code="404"> the filme was not found </response>
+        </member>
+    </members>
+</doc>

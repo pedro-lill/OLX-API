@@ -48,3 +48,5 @@
 /home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/Microsoft.AspNetCore.JsonPatch.dll
 /home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/Newtonsoft.Json.Bson.dll
+/home/desbravador/Documents/OLX-API/FilmesApi/bin/Debug/net7.0/FilmesApi.xml
+/home/desbravador/Documents/OLX-API/FilmesApi/obj/Debug/net7.0/FilmesApi.xml

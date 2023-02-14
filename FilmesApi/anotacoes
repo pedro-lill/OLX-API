@@ -54,7 +54,7 @@ Quando criamos um recurso novo no sistema através do verbo POST,
 
 para fazer migrations no linux:
     dotnet tool install --global dotnet-ef
-    dotnet ef migrations add FilmeMigration
+    dotnet ef migrations add OlxMigration
     dotnet ef database update
 
     importante colocar ID user e senha no appsettings.json
@@ -91,3 +91,20 @@ Para altera através do patch:
             "value" : "novo nome"
         }
     ]
+
+    <history |grep microsoft>
+        history CMD
+
+
+
+O verbo PUT pode ser utilizado quando queremos atualizar algum recurso no sistema.
+
+O verbo PATCH também pode ser utilizado para atualizações, porém de maneira parcial.
+
+Apesar do verbo PATCH não exigir a passagem completa do objeto a ser atualizado, exige uma configuração mais complexa.
+
+O verbo DELETE deve ser utilizado quando queremos deletar um recurso no sistema.
+
+Quando um recurso é atualizado ou removido com sucesso, devemos retornar status 204 (No Content).
+
+O Swagger auxilia o processo de entendimento sobre uma rota, seus parâmetros e retornos.''
